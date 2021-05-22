@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 175%;
+  font-weight: 300;
+  line-height: 2;
+}
+
+body {
+  align-items: center;
+  background: url ("Final_final_background.svg") no-repeat center center fixed;
+  background-color: rebeccapurple;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+main > .portrait__wall {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat (5, 1fr);
+  border: 2px solid purple;
+  padding: 10%;
+  grid-column-gap: 10px;
+  object-fit: contain;
+  max-width: 20em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  max-width: 15em;
+  overflow: hidden;
+  border: solid 5px pink;
+  background-color: white;
+  padding: 1.5em 1em;
+  position: relative;
+  text-align: center;
+}
+
+main > .portrait__wall > .Grandfather__1 {
+  order: solid coral 2px;
+  padding: 50%;
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__wall > .Grandmother__1 {
+  order: solid coral 2px;
+  padding: 50%;
+  box-shadow: 0 0 40px 0px black;
+}
+
+footer {
+  justify-content: center;
+
+  .button {
+    border-radius: 20px;
+    border: coral solid 2px;
+    padding: 50px;
+  }
+}
