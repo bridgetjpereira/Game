@@ -1,77 +1,190 @@
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
-}
-
-body {
+  font-family: "Cinzel Decorative", cursive;
+  font-size: medium;
+  color: white;
   margin: 0;
+  padding: 0;
+  max-height: 100%;
   max-width: 100%;
+  margin-bottom: 0%;
+  background-size: cover;
+  overflow: hidden;
 }
 
 a {
   text-decoration: none;
 }
 
+body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
 html {
-  font-size: 175%;
+  font-size: 100%;
   font-weight: 300;
   line-height: 2;
 }
 
-body {
+.nav__flex {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(226, 48, 48);
+  padding-top: 10px;
+}
+
+.main__flex {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
   align-items: center;
-  background: url ("Final_final_background.svg") no-repeat center center fixed;
-  background-color: rebeccapurple;
-  display: flex;
-  height: 100vh;
+  background-color: red;
+  height: 50vh;
   justify-content: center;
+  flex-direction: row;
 }
 
-main {
+.buttons__container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: red;
+  grid-column: 3/4;
+  grid-row: 5/6;
 }
 
-main > .portrait__wall {
+.buttons__container > .play__button {
+  text-align: center;
+  border-radius: 15px;
+  border: solid 2px white;
+  background-color: white;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.buttons__container > .score__button {
+  text-align: center;
+  border-radius: 15px;
+  border: solid 2px white;
+  background-color: white;
+  color: red;
+  margin-top: 10px;
+}
+
+.buttons__container > .moves__button {
+  text-align: center;
+  border-radius: 15px;
+  border: solid 2px white;
+  background-color: white;
+  color: red;
+  margin-top: 10px;
+}
+
+.portrait__grid {
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat (5, 1fr);
-  border: 2px solid purple;
-  padding: 10%;
+  grid-gap: 25px;
+  grid-auto-columns: auto;
+  grid-auto-rows: auto;
+  padding: 30%;
   grid-column-gap: 10px;
+  grid-row-gap: 10px;
   object-fit: contain;
   max-width: 20em;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2em;
+  margin-top: 0.5 em;
   max-width: 15em;
   overflow: hidden;
-  border: solid 5px pink;
-  background-color: white;
+  background-color: red;
   padding: 1.5em 1em;
-  position: relative;
   text-align: center;
 }
+.main__flex > .portrait__grid > .img {
+  height: 1fr;
+  width: 1fr;
+  padding: 10px;
+  object-fit: cover;
+}
 
-main > .portrait__wall > .Grandfather__1 {
-  order: solid coral 2px;
-  padding: 50%;
+.main__flex > .portrait__grid > .Grandfather__1 {
+  padding: 10%;
   box-shadow: 0 0 40px 0px black;
 }
 
-main > .portrait__wall > .Grandmother__1 {
-  order: solid coral 2px;
-  padding: 50%;
+.main__flex > .portrait__grid > .Grandfather__2 {
+  padding: 10%;
   box-shadow: 0 0 40px 0px black;
 }
 
-footer {
-  justify-content: center;
+main > .portrait__grid > .Grandmother__1 {
+  padding: 10%;
+  box-shadow: 0 0 40px 0px black;
+}
 
-  .button {
-    border-radius: 20px;
-    border: coral solid 2px;
-    padding: 50px;
-  }
+main > .portrait__grid > .Grandmother__2 {
+  padding: 10%;
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Mother__1 {
+  padding: 10%;
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Mother__2 {
+  padding: 10%;
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Father__1 {
+  padding: 10%;
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Father__2 {
+  padding: 10%;
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Child__1 {
+  padding: 10%;
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Child__2 {
+  padding: 10%;
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Counterfeit {
+  padding: 10%;
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Dog__1 {
+  padding: 10%;
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Dog__2 {
+  padding: 10%;
+  box-shadow: 0 0 40px 0px black;
+}
+
+.button {
+  border-radius: 20px;
+  border: solid 2px;
+  padding: 10%;
+}
+
+.footer-flex {
+  height: 25vh;
+  background: url(Final-wood-panel.svg) bottom center no-repeat;
+  background-size: cover;
+}
+
+.footer-flex > .img {
+  height: 25vh;
 }
