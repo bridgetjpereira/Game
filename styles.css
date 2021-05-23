@@ -50,7 +50,7 @@ html {
 
 .buttons__container {
   display: flex;
-  flex-direction: column;
+  flex-direction:row;
   align-items: center;
   justify-content: center;
   background-color: red;
@@ -58,23 +58,33 @@ html {
 
 }
 
-.play__button {
+ .play__button {
   text-align: center;
   border-radius: 10px;
   border: solid 2px white;
   background-color:rgb(226, 48, 48);
   color: white;
-  margin-bottom: 10px;
   margin-left: 10px;
   width: 5em;
   margin-top: 0px;
+}
+.buttons__container >.number{
+  text-align: left;
+  border-radius: 10px;
+  border: solid 2px white;
+  background-color: white;
+  color: red;
+  margin-top: 10px;
+  padding-left: 5px;
+  width: 17em;
+
 }
 
 .buttons__container > .score__heading {
   text-align: left;
   border-radius: 10px;
   border: solid 2px white;
-  background-color: white;
+  background-color:red;
   color: red;
   margin-top: 10px;
   padding-left: 5px;
@@ -191,7 +201,7 @@ main > .portrait__grid > .Dog__2 {
 
 
 .footer-flex {
-  height: 25vh;
+  height: 23vh;
   background: url(Final-wood-panel.svg) bottom center no-repeat;
   background-size: cover;
 }
@@ -200,6 +210,233 @@ main > .portrait__grid > .Dog__2 {
   height: 25vh;
 }
 
+@media screen and (min-width: 375px) {
+
+  .portrait__grid {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(56px, 1fr))
+    padding: 30%;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    object-fit: contain;
+    max-width: 23em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5 em;
+  
+    overflow: hidden;
+    background-color: red;
+    padding: 1.5em 1em;
+    text-align: center;
+  }
+  .main__flex > .portrait__grid > .img {
+    height: 1fr;
+    width: 1fr;
+    padding: 10px;
+    object-fit: cover;
+  }
+  
+  .main__flex > .portrait__grid > .Grandfather__1 {
+    padding: 10%;
+    box-shadow: 0 0 40px 0px black;
+  }
+  
+  .main__flex > .portrait__grid > .Grandfather__2 {
+    padding: 10%;
+    box-shadow: 0 0 40px 0px black;
+  }
+  
+  main > .portrait__grid > .Grandmother__1 {
+    padding: 10%;
+    box-shadow: 0 0 40px 0px black;
+  }
+  
+  main > .portrait__grid > .Grandmother__2 {
+    padding: 10%;
+    box-shadow: 0 0 40px 0px black;
+  }
+  
+  main > .portrait__grid > .Mother__1 {
+    padding: 10%;
+    box-shadow: 0 0 40px 0px black;
+  }
+  
+  main > .portrait__grid > .Mother__2 {
+    padding: 10%;
+    box-shadow: 0 0 40px 0px black;
+  }
+  
+  main > .portrait__grid > .Father__1 {
+    padding: 10%;
+    box-shadow: 0 0 40px 0px black;
+  }
+  
+  main > .portrait__grid > .Father__2 {
+    padding: 10%;
+    box-shadow: 0 0 40px 0px black;
+  }
+  
+  main > .portrait__grid > .Child__1 {
+    padding: 10%;
+    box-shadow: 0 0 40px 0px black;
+  }
+  
+  main > .portrait__grid > .Child__2 {
+    padding: 10%;
+    box-shadow: 0 0 40px 0px black;
+  }
+  
+  main > .portrait__grid > .Counterfeit {
+    padding: 10%;
+    box-shadow: 0 0 40px 0px black;
+  }
+  
+  main > .portrait__grid > .empty__frame {
+   
+    box-shadow: 0 0 40px 0px black;
+  }
+  
+  main > .portrait__grid > .Dog__1 {
+    padding: 10%;
+    box-shadow: 0 0 40px 0px black;
+  }
+  
+  main > .portrait__grid > .Dog__2 {
+    padding: 10%;
+    box-shadow: 0 0 40px 0px black;
+  }
+  
+}
+  
+  .footer-flex {
+    height: 23vh;
+    background: url(Final-wood-panel.svg) bottom center no-repeat;
+    background-size: cover;
+  }
+  
+  .footer-flex > .img {
+    height: 25vh;
+  }
+  
+  @media screen and (min-width: 425px) {
+
+    .portrait__grid {
+      display: grid;
+      grid-gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
+      grid-template-rows: repeat(auto-fit, minmax(56px, 1fr))
+      padding: 30%;
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      object-fit: contain;
+      max-width: 23em;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0.5 em;
+    
+      overflow: hidden;
+      background-color: red;
+      padding: 1.5em 1em;
+      text-align: center;
+    }
+    .main__flex > .portrait__grid > .img {
+      height: 1fr;
+      width: 1fr;
+      padding: 10px;
+      object-fit: cover;
+    }
+    
+    .main__flex > .portrait__grid > .Grandfather__1 {
+      padding: 10%;
+      box-shadow: 0 0 40px 0px black;
+    }
+    
+    .main__flex > .portrait__grid > .Grandfather__2 {
+      padding: 10%;
+      box-shadow: 0 0 40px 0px black;
+    }
+    
+    main > .portrait__grid > .Grandmother__1 {
+      padding: 10%;
+      box-shadow: 0 0 40px 0px black;
+    }
+    
+    main > .portrait__grid > .Grandmother__2 {
+      padding: 10%;
+      box-shadow: 0 0 40px 0px black;
+    }
+    
+    main > .portrait__grid > .Mother__1 {
+      padding: 10%;
+      box-shadow: 0 0 40px 0px black;
+    }
+    
+    main > .portrait__grid > .Mother__2 {
+      padding: 10%;
+      box-shadow: 0 0 40px 0px black;
+    }
+    
+    main > .portrait__grid > .Father__1 {
+      padding: 10%;
+      box-shadow: 0 0 40px 0px black;
+    }
+    
+    main > .portrait__grid > .Father__2 {
+      padding: 10%;
+      box-shadow: 0 0 40px 0px black;
+    }
+    
+    main > .portrait__grid > .Child__1 {
+      padding: 10%;
+      box-shadow: 0 0 40px 0px black;
+    }
+    
+    main > .portrait__grid > .Child__2 {
+      padding: 10%;
+      box-shadow: 0 0 40px 0px black;
+    }
+    
+    main > .portrait__grid > .Counterfeit {
+      padding: 10%;
+      box-shadow: 0 0 40px 0px black;
+    }
+    
+    main > .portrait__grid > .empty__frame {
+     
+      box-shadow: 0 0 40px 0px black;
+    }
+    
+    main > .portrait__grid > .Dog__1 {
+      padding: 10%;
+      box-shadow: 0 0 40px 0px black;
+    }
+    
+    main > .portrait__grid > .Dog__2 {
+      padding: 10%;
+      box-shadow: 0 0 40px 0px black;
+    }
+    
+    
+    .footer-flex {
+      height: 23vh;
+      background: url(Final-wood-panel.svg) bottom center no-repeat;
+      background-size: cover;
+    }
+    
+    .footer-flex > .img {
+      height: 25vh;
+    }
+
+
+  }
+
+
+
+
+
+}
 
 
 @media screen and (min-width: 768px) {
@@ -218,11 +455,11 @@ main > .portrait__grid > .Dog__2 {
 
 .portrait__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(70px, 1fr))
-  padding: 60%;
-  grid-column-gap: 20px;
-  grid-row-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  padding: 30%;
+  grid-column-gap: 50px;
+  grid-row-gap: 30px;
   max-width: 45em;
   margin-left: auto;
   margin-right: auto;
@@ -327,9 +564,9 @@ main > .portrait__grid > .Dog__2 {
 @media screen and (min-width: 1024px){
 .portrait__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(90px, 1fr))
-  padding: 60%;
+  grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(85px, 1fr))
+  padding: 30%;
   grid-column-gap: 50px;
   grid-row-gap: 20px;
   max-width: 45em;
@@ -421,7 +658,15 @@ main > .portrait__grid > .Dog__2 {
   box-shadow: 0 0 40px 0px black;
 }
 
+.footer-flex {
+  height: 21vh;
+  background: url(Final-wood-panel.svg) bottom center no-repeat;
+  background-size: cover;
+}
 
+.footer-flex > .img {
+  height: 25vh;
+}
 }
 
 
@@ -433,12 +678,12 @@ main > .portrait__grid > .Dog__2 {
   
   .portrait__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(110px, 1fr))
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
   padding: 20%;
   grid-column-gap: 50px;
   grid-row-gap:10px;
-  max-width: 45em;
+  max-width: 80em;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0.5 em;
@@ -540,7 +785,7 @@ main > .portrait__grid > .Dog__2 {
   grid-template-rows: repeat(auto-fit, minmax(200px, 1fr))
   grid-column-gap: 50px;
   grid-row-gap:10px;
-  max-width: 45em;
+  max-width: 80em;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0.1 em;
