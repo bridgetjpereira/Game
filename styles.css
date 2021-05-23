@@ -1,8 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: "Cinzel Decorative", cursive;
-  font-size: medium;
-  color: white;
+  font-size: large;
   margin: 0;
   padding: 0;
   max-height: 100%;
@@ -32,7 +31,10 @@ html {
   display: flex;
   justify-content: space-evenly;
   background-color: rgb(226, 48, 48);
+  color:white;
   padding-top: 10px;
+  height: 5vh;
+
 }
 
 .main__flex {
@@ -49,53 +51,62 @@ html {
 .buttons__container {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   background-color: red;
-  grid-column: 3/4;
-  grid-row: 5/6;
+
+
 }
 
-.buttons__container > .play__button {
+.play__button {
   text-align: center;
-  border-radius: 15px;
+  border-radius: 10px;
   border: solid 2px white;
-  background-color: white;
-  color: red;
+  background-color:rgb(226, 48, 48);
+  color: white;
   margin-bottom: 10px;
+  margin-left: 10px;
+  width: 5em;
+  margin-top: 0px;
 }
 
-.buttons__container > .score__button {
-  text-align: center;
-  border-radius: 15px;
+.buttons__container > .score__heading {
+  text-align: left;
+  border-radius: 10px;
   border: solid 2px white;
   background-color: white;
   color: red;
   margin-top: 10px;
+  padding-left: 5px;
+  width: 17em;
 }
 
-.buttons__container > .moves__button {
-  text-align: center;
-  border-radius: 15px;
+.buttons__container > .moves__heading {
+  text-align: left;
+  border-radius: 10px;
   border: solid 2px white;
   background-color: white;
   color: red;
   margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  width: 17em;
 }
 
 .portrait__grid {
   display: grid;
   grid-gap: 25px;
-  grid-auto-columns: auto;
-  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr))
   padding: 30%;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   object-fit: contain;
-  max-width: 20em;
+  max-width: 23em;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0.5 em;
-  max-width: 15em;
+
   overflow: hidden;
   background-color: red;
   padding: 1.5em 1em;
@@ -173,11 +184,6 @@ main > .portrait__grid > .Dog__2 {
   box-shadow: 0 0 40px 0px black;
 }
 
-.button {
-  border-radius: 20px;
-  border: solid 2px;
-  padding: 10%;
-}
 
 .footer-flex {
   height: 25vh;
@@ -188,3 +194,453 @@ main > .portrait__grid > .Dog__2 {
 .footer-flex > .img {
   height: 25vh;
 }
+
+
+
+@media screen and (min-width: 768px) {
+
+  .play__button {
+    text-align: center;
+    border-radius: 10px;
+    border: solid 2px white;
+    background-color:rgb(226, 48, 48);
+    color: white;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 5em;
+    margin-top: 0px;
+  }
+
+.portrait__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(70px, 1fr))
+  padding: 60%;
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  max-width: 45em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5 em;
+  object-fit: contain;
+  overflow: hidden;
+  background-color: red;
+  text-align: center;
+
+  
+}
+.main__flex > .portrait__grid > .img {
+  height: 1fr;
+  width: 1fr;
+  object-fit: cover;
+  flex-wrap: wrap;
+}
+
+.main__flex > .portrait__grid > .Grandfather__1 {
+
+  box-shadow: 0 0 40px 0px black;
+    object-fit: cover;
+
+}
+
+.main__flex > .portrait__grid > .Grandfather__1 >.Grandmother_1__portrait {
+   
+  
+    
+
+}
+
+.main__flex > .portrait__grid > .Grandfather__2 {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Grandmother__1 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Grandmother__2 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Mother__1 {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Mother__2 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Father__1 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Father__2 {
+
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Child__1 {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Child__2 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Counterfeit {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Dog__1 {
+
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Dog__2 {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+
+}
+
+
+
+@media screen and (min-width: 1024px){
+.portrait__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(90px, 1fr))
+  padding: 60%;
+  grid-column-gap: 50px;
+  grid-row-gap: 20px;
+  max-width: 45em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5 em;
+  object-fit: contain;
+  overflow: hidden;
+  background-color: red;
+  text-align: center;
+
+  
+}
+.main__flex > .portrait__grid > .img {
+  height: 1fr;
+  width: 1fr;
+  object-fit: cover;
+  flex-wrap: wrap;
+}
+
+.main__flex > .portrait__grid > .Grandfather__1 {
+
+  box-shadow: 0 0 40px 0px black;
+
+}
+
+.main__flex > .portrait__grid > .Grandfather__2 {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Grandmother__1 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Grandmother__2 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Mother__1 {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Mother__2 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Father__1 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Father__2 {
+
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Child__1 {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Child__2 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Counterfeit {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Dog__1 {
+
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Dog__2 {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+
+}
+
+
+
+
+
+
+@media screen and (min-width: 1440px) {
+  
+  .portrait__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(110px, 1fr))
+  padding: 20%;
+  grid-column-gap: 50px;
+  grid-row-gap:10px;
+  max-width: 45em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5 em;
+  object-fit: contain;
+  overflow: hidden;
+  background-color: red;
+  text-align: center;
+
+  
+}
+.main__flex > .portrait__grid > .img {
+  height: 1fr;
+  width: 1fr;
+  object-fit: cover;
+  flex-wrap: wrap;
+}
+
+.main__flex > .portrait__grid > .Grandfather__1 {
+
+  box-shadow: 0 0 40px 0px black;
+
+}
+
+.main__flex > .portrait__grid > .Grandfather__2 {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Grandmother__1 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Grandmother__2 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Mother__1 {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Mother__2 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Father__1 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Father__2 {
+
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Child__1 {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Child__2 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Counterfeit {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Dog__1 {
+
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Dog__2 {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+
+}
+
+
+
+@media screen and (min-width: 2560px) {
+  
+  .portrait__grid {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr))
+  grid-column-gap: 50px;
+  grid-row-gap:10px;
+  max-width: 45em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.1 em;
+  object-fit: contain;
+  overflow: hidden;
+  background-color: red;
+  text-align: center;
+
+  
+}
+.main__flex > .portrait__grid > .img {
+  height: 1fr;
+  width: 1fr;
+  object-fit: cover;
+  flex-wrap: wrap;
+}
+
+.main__flex > .portrait__grid > .Grandfather__1 {
+
+  box-shadow: 0 0 40px 0px black;
+
+}
+
+.main__flex > .portrait__grid > .Grandfather__2 {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Grandmother__1 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Grandmother__2 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Mother__1 {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Mother__2 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Father__1 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Father__2 {
+
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Child__1 {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Child__2 {
+  
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Counterfeit {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Dog__1 {
+
+  box-shadow: 0 0 40px 0px black;
+}
+
+main > .portrait__grid > .Dog__2 {
+ 
+  box-shadow: 0 0 40px 0px black;
+}
+
+
+.buttons__container > .play__button {
+  text-align: center;
+  border-radius: 10px;
+  border: solid 2px white;
+  background-color:rgb(226, 48, 48);
+  color: white;
+  margin-bottom: 2px;
+  margin-left: 10px;
+  width: 5em;
+  margin-top: 0px;
+}
+
+.buttons__container > .score__heading {
+  text-align: left;
+  border-radius: 10px;
+  border: solid 2px white;
+  background-color: white;
+  color: red;
+  margin-top: 10px;
+  padding-left: 5px;
+  width: 17em;
+}
+
+.buttons__container > .moves__heading {
+  text-align: left;
+  border-radius: 10px;
+  border: solid 2px white;
+  background-color: white;
+  color: red;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  width: 17em;
+}
+}
+
+
