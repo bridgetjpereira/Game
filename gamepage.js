@@ -1,23 +1,105 @@
+
+//Function to show game section
+
+ //const showGameSection = () => {
+   // document.getElementById("game_section").classList.remove("hidden");
+   // document.getElementById("gamepage_mobile").classList.add("hidden");
+//}
+
+//Function to start game//
+//<button class="btn toStart" onclick="toStart()">
+//<a class="btn_text"  href="#">Go to the start screen</a>
+//</button>
+
+//Function to create 2 minute counter
+//When "Start game" is clicked, start counter!
+
+
+
+//Function to stop 2 minute counter
+
+//Function to randomly shuffle deck of cards
+
+//Click events for each card- when they are clicked they
+//flip over
+
+//When two cards match, hide cards and add a point( dynamic scoreboard)
+
+//If two cards don't match, flip them back over
+
+//Function to end game
+
+//Function to lose game
+
+//Function to win game
+
+//Function to play again
+
+//Function to show and hide cards
+
+//Function to turn cards over??
+
+
+
+
+
+
+
+
+
+
+
+
+/*//START BY DECLARING 
+
+let score = 0;
+let moves = 0;
+let score = document.getElementById("score")
+let moves = document.getElementById("moves")
+let portrait__grid = document.getElementsByClassName("portrait");
+
+
+
 ///1. Button to start game
 
-function startGame() {
+const startGame = () => {
+    
+    createGame();
+    showGameSection();
 
+    let twoMinutes = 60 * 2 ,                                    
+    display = document.getElementById("countdown_time");
+
+    startCountdown(twoMinutes, display);
 }
-
 
 
 //2. Built in JavaScript timer
 //added "number" class to html
+//setTimeout(gameTimer, 1000 * 120);
 
 let count= 0;
 function updateCount() {
     count = count + 1;
-    document.getElementById
+    document.getElementById ("number").innerHTML = count;
+    setTimeout(updateCount, 1000);
 }
 
+function gameLoop(){
+    alert ("Game over!");
+    setTimeout(gameLoop, 3000);
+}
+
+//3. Deck of all 'portraits' in game. Shuffles when game is refreshed.
+//4. counter to count the number of moves made by player and timer to know the duration of a play
+
+//Click on a card
+//Keep revealing cards and working your memory to remember each unveiled card.
+//Match cards properly with less moves and in faster time
 
 
-//setTimeout(gameTimer, 1000 * 120);
+
+
 
 /////////FUNCTIONS BRIDGET
 

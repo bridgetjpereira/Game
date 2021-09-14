@@ -19,6 +19,17 @@ body {
   display: flex;
   height: 100vh;
   flex-direction: column;
+
+}
+
+
+.nav__flex{
+padding-top: 2em;
+}
+
+
+.nav__flex{
+  background-color: red;
 }
 
 html {
@@ -58,22 +69,30 @@ html {
 
 }
 
+
  .play__button {
   text-align: center;
-  border-radius: 10px;
-  border: solid 2px white;
-  background-color:rgb(226, 48, 48);
-  color: white;
-  margin-left: 10px;
-  width: 5em;
-  margin-top: 0px;
+  margin-top: 1em;
+}
+
+.score_moves_timer{
+ display: flex;
+ flex-direction:column;
+ justify-content: space-evenly;
+ color: white;
+ padding-top: 1em;
+ padding-right: 8em;
+}
+
+.footer-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .buttons__container >.number{
   text-align: left;
   border-radius: 10px;
   border: solid 2px white;
-  background-color: white;
-  color: red;
   margin-top: 10px;
   padding-left: 5px;
   width: 17em;
@@ -84,8 +103,6 @@ html {
   text-align: left;
   border-radius: 10px;
   border: solid 2px white;
-  background-color:red;
-  color: red;
   margin-top: 10px;
   padding-left: 5px;
   width: 17em;
@@ -95,8 +112,6 @@ html {
   text-align: left;
   border-radius: 10px;
   border: solid 2px white;
-  background-color: white;
-  color: red;
   margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 5px;
@@ -106,9 +121,8 @@ html {
 .portrait__grid {
   display: grid;
   grid-gap: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr))
-  padding: 30%;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(40px, 1fr))
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   object-fit: contain;
@@ -116,93 +130,128 @@ html {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0.5 em;
-
   overflow: hidden;
   background-color: red;
-  padding: 1.5em 1em;
   text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
 }
-.main__flex > .portrait__grid > .img {
-  height: 1fr;
-  width: 1fr;
-  padding: 10px;
+
+.img{
   object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
-.main__flex > .portrait__grid > .Grandfather__1 {
-  padding: 10%;
+.main__flex > .portrait__grid > .Grandfather__1 >.portrait {
   box-shadow: 0 0 40px 0px black;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
-.main__flex > .portrait__grid > .Grandfather__2 {
-  padding: 10%;
+.main__flex > .portrait__grid > .Grandfather__2 >.portrait {
   box-shadow: 0 0 40px 0px black;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
-main > .portrait__grid > .Grandmother__1 {
-  padding: 10%;
+main > .portrait__grid > .Grandmother__1 >.portrait {
   box-shadow: 0 0 40px 0px black;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
-main > .portrait__grid > .Grandmother__2 {
-  padding: 10%;
+main > .portrait__grid > .Grandmother__2 >.portrait {
   box-shadow: 0 0 40px 0px black;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
-main > .portrait__grid > .Mother__1 {
-  padding: 10%;
+main > .portrait__grid > .Mother__1 >.portrait {
   box-shadow: 0 0 40px 0px black;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
-main > .portrait__grid > .Mother__2 {
-  padding: 10%;
+main > .portrait__grid > .Mother__2 >.portrait {
   box-shadow: 0 0 40px 0px black;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
-main > .portrait__grid > .Father__1 {
-  padding: 10%;
+main > .portrait__grid > .Father__1 >.portrait {
   box-shadow: 0 0 40px 0px black;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
-main > .portrait__grid > .Father__2 {
-  padding: 10%;
+
+main > .portrait__grid > .Father__2 >.portrait {
   box-shadow: 0 0 40px 0px black;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
-main > .portrait__grid > .Child__1 {
-  padding: 10%;
+
+main > .portrait__grid > .Child__1 >.portrait {
   box-shadow: 0 0 40px 0px black;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
-main > .portrait__grid > .Child__2 {
-  padding: 10%;
+
+main > .portrait__grid > .Child__2 >.portrait {
   box-shadow: 0 0 40px 0px black;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
-main > .portrait__grid > .Counterfeit {
-  padding: 10%;
+
+main > .portrait__grid > .Counterfeit >.portrait {
   box-shadow: 0 0 40px 0px black;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
-main > .portrait__grid > .empty__frame {
- 
+
+main > .portrait__grid > .empty__frame >.portrait {
   box-shadow: 0 0 40px 0px black;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
-main > .portrait__grid > .Dog__1 {
-  padding: 10%;
+main > .portrait__grid > .Dog__1 >.portrait {
   box-shadow: 0 0 40px 0px black;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
-main > .portrait__grid > .Dog__2 {
-  padding: 10%;
+
+main > .portrait__grid > .Dog__2 >.portrait {
   box-shadow: 0 0 40px 0px black;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
+
 
 
 .footer-flex {
   height: 23vh;
-  background: url(Final-wood-panel.svg) bottom center no-repeat;
+  background: url(Final-wood-panel-low-new-svg.svg) bottom center no-repeat;
   background-size: cover;
 }
 
@@ -214,214 +263,267 @@ main > .portrait__grid > .Dog__2 {
 
   .portrait__grid {
     display: grid;
-    grid-gap: 25px;
-    grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(56px, 1fr))
-    padding: 30%;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    object-fit: contain;
-    max-width: 23em;
+    grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(64px, 1fr))
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0.5 em;
-  
-    overflow: hidden;
     background-color: red;
-    padding: 1.5em 1em;
     text-align: center;
+    padding-top: 1em;
   }
-  .main__flex > .portrait__grid > .img {
-    height: 1fr;
-    width: 1fr;
-    padding: 10px;
+  
+  .img{
     object-fit: cover;
+    width: 100%;
+    max-height: 100%;
   }
   
-  .main__flex > .portrait__grid > .Grandfather__1 {
-    padding: 10%;
+  .main__flex > .portrait__grid > .Grandfather__1 > .portrait {
     box-shadow: 0 0 40px 0px black;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+
   }
   
-  .main__flex > .portrait__grid > .Grandfather__2 {
-    padding: 10%;
+  .main__flex > .portrait__grid > .Grandfather__2 > .portrait {
     box-shadow: 0 0 40px 0px black;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+
   }
-  
-  main > .portrait__grid > .Grandmother__1 {
-    padding: 10%;
+  main > .portrait__grid > .Grandmother__1 > .portrait {
     box-shadow: 0 0 40px 0px black;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+
   }
   
-  main > .portrait__grid > .Grandmother__2 {
-    padding: 10%;
+  main > .portrait__grid > .Grandmother__2 > .portrait {
     box-shadow: 0 0 40px 0px black;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+
   }
   
-  main > .portrait__grid > .Mother__1 {
-    padding: 10%;
+  main > .portrait__grid > .Mother__1 > .portrait {
     box-shadow: 0 0 40px 0px black;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+
   }
   
-  main > .portrait__grid > .Mother__2 {
-    padding: 10%;
+  main > .portrait__grid > .Mother__2 > .portrait {
     box-shadow: 0 0 40px 0px black;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+
   }
   
-  main > .portrait__grid > .Father__1 {
-    padding: 10%;
+  main > .portrait__grid > .Father__1 > .portrait {
     box-shadow: 0 0 40px 0px black;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+
   }
   
-  main > .portrait__grid > .Father__2 {
-    padding: 10%;
+  main > .portrait__grid > .Father__2 > .portrait {
     box-shadow: 0 0 40px 0px black;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+
   }
   
-  main > .portrait__grid > .Child__1 {
-    padding: 10%;
+  main > .portrait__grid > .Child__1 > .portrait {
     box-shadow: 0 0 40px 0px black;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+
   }
   
-  main > .portrait__grid > .Child__2 {
-    padding: 10%;
+  main > .portrait__grid > .Child__2 > .portrait {
     box-shadow: 0 0 40px 0px black;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+
   }
   
-  main > .portrait__grid > .Counterfeit {
-    padding: 10%;
+  main > .portrait__grid > .Counterfeit > .portrait {
     box-shadow: 0 0 40px 0px black;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+
   }
   
-  main > .portrait__grid > .empty__frame {
-   
+  main > .portrait__grid > .empty__frame > .portrait {
     box-shadow: 0 0 40px 0px black;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+
   }
-  
-  main > .portrait__grid > .Dog__1 {
-    padding: 10%;
+  main > .portrait__grid > .Dog__1 > .portrait {
     box-shadow: 0 0 40px 0px black;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+
   }
   
-  main > .portrait__grid > .Dog__2 {
-    padding: 10%;
+  main > .portrait__grid > .Dog__2 > .portrait {
     box-shadow: 0 0 40px 0px black;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+
   }
   
-}
+
   
   .footer-flex {
-    height: 23vh;
-    background: url(Final-wood-panel.svg) bottom center no-repeat;
+    height: 20vh;
+    background: url(Final-wood-panel-low-new-svg.svg) bottom center no-repeat;
     background-size: cover;
   }
   
   .footer-flex > .img {
-    height: 25vh;
+    height: 20vh;
   }
-  
+}
   @media screen and (min-width: 425px) {
 
     .portrait__grid {
       display: grid;
-      grid-gap: 25px;
-      grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
-      grid-template-rows: repeat(auto-fit, minmax(56px, 1fr))
-      padding: 30%;
-      grid-column-gap: 10px;
-      grid-row-gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+      grid-template-rows: repeat(auto-fit, minmax(60px, 1fr))
+      grid-column-gap: 5px;
+      grid-row-gap: 5px;
       object-fit: contain;
-      max-width: 23em;
       margin-left: auto;
       margin-right: auto;
       margin-top: 0.5 em;
-    
-      overflow: hidden;
       background-color: red;
-      padding: 1.5em 1em;
       text-align: center;
     }
-    .main__flex > .portrait__grid > .img {
-      height: 1fr;
-      width: 1fr;
-      padding: 10px;
+
+    .img{
       object-fit: cover;
+      width: 100%;
+      max-height: 100%;
     }
-    
-    .main__flex > .portrait__grid > .Grandfather__1 {
-      padding: 10%;
+
+   
+    .main__flex > .portrait__grid > .Grandfather__1 >.portrait {
       box-shadow: 0 0 40px 0px black;
+      object-fit: cover;
+      width: 100%;
+      max-height: 100%;
     }
     
-    .main__flex > .portrait__grid > .Grandfather__2 {
-      padding: 10%;
+    .main__flex > .portrait__grid > .Grandfather__2 >.portrait {
       box-shadow: 0 0 40px 0px black;
+      object-fit: cover;
+      width: 100%;
+      max-height: 100%;
     }
+
+    main > .portrait__grid > .Grandmother__1 >.portrait {
+  box-shadow: 0 0 40px 0px black;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
     
-    main > .portrait__grid > .Grandmother__1 {
-      padding: 10%;
+    main > .portrait__grid > .Grandmother__2 >.portrait {
       box-shadow: 0 0 40px 0px black;
+      object-fit: cover;
+      width: 100%;
+      max-height: 100%;
     }
     
-    main > .portrait__grid > .Grandmother__2 {
-      padding: 10%;
+    main > .portrait__grid > .Mother__1 >.portrait {
       box-shadow: 0 0 40px 0px black;
+      object-fit: cover;
+      width: 100%;
+      max-height: 100%;
     }
-    
-    main > .portrait__grid > .Mother__1 {
-      padding: 10%;
+    main > .portrait__grid > .Mother__2 >.portrait {
       box-shadow: 0 0 40px 0px black;
+      object-fit: cover;
+      width: 100%;
+      max-height: 100%;
     }
     
-    main > .portrait__grid > .Mother__2 {
-      padding: 10%;
+    main > .portrait__grid > .Father__1 >.portrait {
       box-shadow: 0 0 40px 0px black;
+      object-fit: cover;
+      width: 100%;
+      max-height: 100%;
     }
     
-    main > .portrait__grid > .Father__1 {
-      padding: 10%;
+    main > .portrait__grid > .Father__2 >.portrait {
       box-shadow: 0 0 40px 0px black;
+      object-fit: cover;
+      width: 100%;
+      max-height: 100%;
     }
     
-    main > .portrait__grid > .Father__2 {
-      padding: 10%;
+    main > .portrait__grid > .Child__1 >.portrait {
       box-shadow: 0 0 40px 0px black;
+      object-fit: cover;
+      width: 100%;
+      max-height: 100%;
     }
-    
-    main > .portrait__grid > .Child__1 {
-      padding: 10%;
+    main > .portrait__grid > .Child__2 >.portrait {
       box-shadow: 0 0 40px 0px black;
+      object-fit: cover;
+      width: 100%;
+      max-height: 100%;
     }
-    
-    main > .portrait__grid > .Child__2 {
-      padding: 10%;
+    main > .portrait__grid > .Counterfeit >.portrait {
       box-shadow: 0 0 40px 0px black;
+      object-fit: cover;
+      width: 100%;
+      max-height: 100%;
     }
     
-    main > .portrait__grid > .Counterfeit {
-      padding: 10%;
+    main > .portrait__grid > .empty__frame >.portrait {
       box-shadow: 0 0 40px 0px black;
+      object-fit: cover;
+      width: 100%;
+      max-height: 100%;
     }
     
-    main > .portrait__grid > .empty__frame {
-     
+    main > .portrait__grid > .Dog__1 >.portrait {
       box-shadow: 0 0 40px 0px black;
+      object-fit: cover;
+      width: 100%;
+      max-height: 100%;
     }
-    
-    main > .portrait__grid > .Dog__1 {
-      padding: 10%;
-      box-shadow: 0 0 40px 0px black;
-    }
-    
-    main > .portrait__grid > .Dog__2 {
-      padding: 10%;
-      box-shadow: 0 0 40px 0px black;
-    }
-    
+
+    main > .portrait__grid > .Dog__2 >.portrait {
+  box-shadow: 0 0 40px 0px black;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
     
     .footer-flex {
       height: 23vh;
-      background: url(Final-wood-panel.svg) bottom center no-repeat;
+      background: url(Final-wood-panel-low-new-svg.svg) bottom center no-repeat;
       background-size: cover;
     }
     
@@ -436,7 +538,7 @@ main > .portrait__grid > .Dog__2 {
 
 
 
-}
+
 
 
 @media screen and (min-width: 768px) {
@@ -455,12 +557,10 @@ main > .portrait__grid > .Dog__2 {
 
 .portrait__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
-  padding: 30%;
-  grid-column-gap: 50px;
-  grid-row-gap: 30px;
-  max-width: 45em;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
+  grid-column-gap: 10px;
+  grid-row-gap: 5px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0.5 em;
@@ -468,29 +568,22 @@ main > .portrait__grid > .Dog__2 {
   overflow: hidden;
   background-color: red;
   text-align: center;
+  
 
   
 }
-.main__flex > .portrait__grid > .img {
-  height: 1fr;
-  width: 1fr;
-  object-fit: cover;
+
+.main__flex{
   flex-wrap: wrap;
 }
 
-.main__flex > .portrait__grid > .Grandfather__1 {
-
+.main__flex > .portrait__grid > .Grandfather__1 >.portrait {
   box-shadow: 0 0 40px 0px black;
-    object-fit: cover;
-
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
-.main__flex > .portrait__grid > .Grandfather__1 >.Grandmother_1__portrait {
-   
-  
-    
-
-}
 
 .main__flex > .portrait__grid > .Grandfather__2 {
  
@@ -660,7 +753,7 @@ main > .portrait__grid > .Dog__2 {
 
 .footer-flex {
   height: 21vh;
-  background: url(Final-wood-panel.svg) bottom center no-repeat;
+  background: url(Final-wood-panel-low-new-svg.svg) bottom center no-repeat;
   background-size: cover;
 }
 
@@ -909,6 +1002,8 @@ main > .portrait__grid > .Dog__2 {
   padding-left: 5px;
   width: 17em;
 }
+
+
 }
 
 
