@@ -1,9 +1,48 @@
+// Create 2 minute count down timer
+
+function startTimer(duration, display) {
+  var timer = duration,
+    minutes,
+    seconds;
+  setInterval(function () {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    display.textContent = minutes + ":" + seconds;
+
+    if (--timer < 0) {
+      timer = duration;
+    }
+  }, 1000);
+}
+
+window.onload = function () {
+  var twoMinutes = 60 * 2,
+    display = document.querySelector("#time");
+  startTimer(twoMinutes, display);
+};
+
+//Function to turn card
+
+function flip(event) {
+  var element = event.currentTarget;
+  if (element.className === "card") {
+    if (element.style.transform == "rotateY(180deg)") {
+      element.style.transform = "rotateY(0deg)";
+    } else {
+      element.style.transform = "rotateY(180deg)";
+    }
+  }
+}
 
 //Function to show game section
 
- //const showGameSection = () => {
-   // document.getElementById("game_section").classList.remove("hidden");
-   // document.getElementById("gamepage_mobile").classList.add("hidden");
+//const showGameSection = () => {
+// document.getElementById("game_section").classList.remove("hidden");
+// document.getElementById("gamepage_mobile").classList.add("hidden");
 //}
 
 //Function to start game//
@@ -14,8 +53,6 @@
 //Function to create 2 minute counter
 //When "Start game" is clicked, start counter!
 
-
-
 //Function to stop 2 minute counter
 
 //Function to randomly shuffle deck of cards
@@ -23,7 +60,7 @@
 //Click events for each card- when they are clicked they
 //flip over
 
-//When two cards match, hide cards and add a point( dynamic scoreboard)
+//When two cards match, hide cards and add a point(dynamic scoreboard)
 
 //If two cards don't match, flip them back over
 
@@ -38,17 +75,6 @@
 //Function to show and hide cards
 
 //Function to turn cards over??
-
-
-
-
-
-
-
-
-
-
-
 
 /*//START BY DECLARING 
 
@@ -361,3 +387,4 @@ const toStart = () => {
     clearBoard();
     showLanding();
 }
+*/
