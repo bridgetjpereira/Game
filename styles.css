@@ -20,6 +20,7 @@ a {
   object-fit: cover;
   height: 100%;
   width: 100%;
+  
 }
 .nav__flex {
   display: flex;
@@ -49,6 +50,7 @@ a {
   grid-row-gap: 20px;
   grid-column-gap: 20px;
   max-width: calc(4 * (100px + 100px));
+  
 }
 
 .buttons__container {
@@ -119,6 +121,7 @@ a {
   height: 0.5em;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   cursor: pointer;
+  
 }
 
 .flip-card-inner {
@@ -127,6 +130,7 @@ a {
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  box-shadow: 0 0 40px 0px black;
 }
 
 .flip-card:hover .flip-card-inner {
@@ -138,7 +142,7 @@ a {
   position: absolute;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
-
+ 
   object-fit: cover;
 }
 
