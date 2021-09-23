@@ -38,6 +38,18 @@ function flip(event) {
   }
 }
 
+var cards = [
+  "pug",
+  "alsatian",
+  "gingerdog",
+  "spaniel",
+  "dogportrait",
+  "whitedog",
+  "hairydog",
+  "armydog",
+];
+var pairs = cards.concat(cards); //create pairs of cards
+
 //Function to show game section
 
 //const showGameSection = () => {
