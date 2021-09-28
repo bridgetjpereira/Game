@@ -1,10 +1,10 @@
 // Create 2 minute count down timer
 
 function startTimer(duration, display) {
-  var timer = duration,
+  let timer = duration,
     minutes,
     seconds;
-  setInterval(function () {
+  intervalID = setInterval(function () {
     minutes = parseInt(timer / 60, 10);
     seconds = parseInt(timer % 60, 10);
 
@@ -14,7 +14,7 @@ function startTimer(duration, display) {
     display.textContent = minutes + ":" + seconds;
 
     if (--timer < 0) {
-      timer = duration;
+      clearInterval(intervalID);
     }
   }, 1000);
 }
@@ -25,8 +25,97 @@ window.onload = function () {
   startTimer(twoMinutes, display);
 };
 
-//Function to turn card
+/*
+//Stop timer needs work- how do I stop when counter reaches zero. Currently just freezing counter at 2 when implemented.
 
+
+/*
+function myStopFunction() {
+  clearTimeout(myVar);
+}
+let stopTimer = setInterval(timer, 1000);
+
+/*function myStopFunction() {
+  clearInterval(stopTimer);
+}*/
+
+/*
+if ((timer = 0)) {
+  clearInterval(stopTimer);
+}
+*/
+
+//Declaring variables
+let score = 0;
+let moves = 0;
+let scoreTracker = document.getElementById("score");
+let movesTracker = document.getElementById("moves");
+let cardsGrid = document.getElementById("cards");
+let openCard;
+let openCardChild;
+let firstCard;
+let twoCards = [];
+let intervalID;
+
+const deckCards = [
+  "pug",
+  "pug",
+  "alsatian",
+  "alsatian",
+  "gingerdog",
+  "gingerdog",
+  "spaniel",
+  "spaniel",
+  "dogportrait",
+  "dogportrait",
+  "whitedog",
+  "whitedog",
+  "hairydog",
+  "hairydog",
+  "armydog",
+  "armydog",
+];
+
+//Shuffle deck
+
+const shuffleCards = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    let temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+};
+
+//Showing and Hiding Sections
+
+//Function to clear board
+
+//Win message
+
+//Lose message
+
+//Set up game
+
+//Start game
+
+const startGame = () => {
+  setupGame();
+
+  let twoMinutes = 60 * 2;
+  display = document.getElementById("#time");
+
+  startTimer(twoMinutes, display);
+};
+
+//Function to stop timer
+
+const stopTimer = () => {
+  console.log("TIME STOP PLS");
+  clearInterval(intervalID);
+};
+//Function to turn card
+/*
 function flip(event) {
   var element = event.currentTarget;
   if (element.className === "card") {
@@ -37,224 +126,11 @@ function flip(event) {
     }
   }
 }
-
-var cards = [
-  "pug",
-  "alsatian",
-  "gingerdog",
-  "spaniel",
-  "dogportrait",
-  "whitedog",
-  "hairydog",
-  "armydog",
-];
-var pairs = cards.concat(cards); //create pairs of cards
-
-var chosenCards = [];
-var cardsToFlip = [];
-
-var gameStarted = false;
-var running = false;
-var outOfTime = false;
-var countdownStarted = false;
-var win = false;
-var pairCount = 0;
-var time = 30;
-
-shuffleArray(pairs); //shuffle cards
-
-$(".flip-card-back").each(function (i, element) {
-  $(this).attr("id", pairs[i]); //sets id in DOM for cards, access styles via css
-});
+*/
+/*
 
 
-
-
-
-$(document).ready(function() {
-    //fallback for safari as it doesn't support vh
-    if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
-      $(".game").height( $(window).height() * 0.9 );
-    }
-      
-      var cards = ['piggy-bank', 'shoe', 'plane', 'suitcase', 'robot', 'ring', 'palm-tree', 'mp3'];
-      var pairs = cards.concat(cards);//create pairs of cards
-      var chosenCards = [];
-      var cardsToFlip = [];
-      
-      var gameStarted = false;
-      var running = false;
-      var outOfTime = false;
-      var countdownStarted = false;
-      var win = false;
-      var pairCount = 0;
-      var time = 30;
-      
-      shuffleArray(pairs);//shuffle cards
-      
-      $('.back').each(function(i, element) {
-          $(this).attr('id', pairs[i]);//sets id in DOM for cards, access styles via css
-      });
-      /*
-      $('.flip-container').click(function(){
-          
-          if (!outOfTime) {
-          
-              if (!gameStarted && !running){//before the game starts, show all cards to the user and flip back
-                  
-                  running = true;
-                  
-                  $('.flip-container').each(function() {
-                      $(this).toggleClass('flip');
-                  });
-                  
-                  setTimeout(function() {
-                      
-                      $('.flip-container').each(function() {
-                          $(this).toggleClass('flip');
-                      });
-                      
-                      gameStarted = true;
-                      running = false;
-                      
-                  }, 2000);
-              }
-      
-              else if ($(this).find('.back').attr('id') == chosenCards[0] && chosenCards[1] == null && $(this).hasClass('flip') && !running) {
-                  
-                  running = true;
-                  
-                  chosenCards[0] = null;//if one card has been chosen and then clicked again, flip back over
-                  $(this).toggleClass('flip');
-                  
-                  running = false;
-                  
-              }
-              
-              else if ($(this).hasClass('flip')) {
-                          
-                  return;//if the card clicked is already flipped, return
-                  
-              }
-          
-              else if (chosenCards[0] == null && chosenCards[1] == null && !$(this).hasClass('flip') && !running) {
-                  
-                  if (!countdownStarted) {
-                      countdown();
-                  }
-                  
-                  running = true;
-                  
-                  chosenCards[0] = $(this).find('.back').attr('id');//if no cards have been chosen, store the chosen card's in chosenCards[0]
-                  $(this).toggleClass('flip');
-                  
-                  running = false;
-                  
-              }
-          
-              
-              else if (chosenCards[0] != null && chosenCards[1] == null && !$(this).hasClass('flip') && !running) {
-                  
-                  running = true;
-                  
-                  chosenCards[1] = $(this).find('.back').attr('id');//if no second card has been flipped, store the chosen card's brand in chosenCards[1] and flip it
-                  $(this).toggleClass('flip');
-          
-                  if (chosenCards[0] == chosenCards[1]) {
-                      
-                      chosenCards[0] = null;
-                      chosenCards[1] = null;
-                      
-                      pairCount++;
-                      
-                      if (pairCount == cards.length) {
-                          win = true;
-                          alert("you win :D");
-                      }
-                      
-                      running = false;
-                      
-                  }
-          
-                  else {//if the brands did not match - empty the chosenCards & flip the cards back over 
-                      
-                      cardsToFlip[0] = chosenCards[0];
-                      cardsToFlip[1] = chosenCards[1];
-                      
-                      chosenCards[0] = null;
-                      chosenCards[1] = null;
-                      
-                      setTimeout(function(){//flip back the chosen cards that did not match
-          
-                          $('*[id*=' + cardsToFlip[0] + ']').each(function() {
-                              $(this).closest('.flip').toggleClass('flip');
-                          });
-                          $('*[id*=' + cardsToFlip[1] + ']').each(function() {
-                              $(this).closest('.flip').toggleClass('flip');
-                          });
-                          
-                          running = false;
-                          
-                      }, 800);
-                  }
-                  
-              }
-                  
-          } else {
-              alert("you have run out of time :(");
-          };
-          
-      });//Flip Container Click End
-      
-      function shuffleArray(array) {
-          for (var i = array.length - 1; i > 0; i--) {
-              var j = Math.floor(Math.random() * (i + 1));
-              var temp = array[i];
-              array[i] = array[j];
-              array[j] = temp;
-          }
-          return array;
-      }
-      
-      function countdown () {
-          
-          countdownStarted = true;
-      
-          var timeStart = +new Date;
-          var timer = setInterval( function() {
-              
-              var timeNow = +new Date;
-              var difference = ( timeNow - timeStart ) / 1000; //calculates time difference if game isn't in focus
-              
-              if (time > 0 && !win) {// if there is still time left and game isn't won, deduct time
-                  
-                  time = 30;
-                  time = Math.floor( time - difference );
-                  $('.timer').text( time );
-                  
-              } else if (win) {//stop timer when game is won
-                  
-                  clearInterval(timer);
-                  
-              } else {//stop timer when time is run out
-                  
-                  outOfTime = true;
-                  alert("you have run out of time :(");
-                  
-                  clearInterval(timer);
-                  
-              } 
-              
-          }, 250 );
-          
-      };
-  });//Document Ready End
-//Function to show game section
-
-//const showGameSection = () => {
-// document.getElementById("game_section").classList.remove("hidden");
-// document.getElementById("gamepage_mobile").classList.add("hidden");
-//}
+/*
 
 //Function to start game//
 //<button class="btn toStart" onclick="toStart()">
@@ -286,7 +162,7 @@ $(document).ready(function() {
 //Function to show and hide cards
 
 //Function to turn cards over??
-
+*/
 /*//START BY DECLARING 
 
 let score = 0;
