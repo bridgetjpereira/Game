@@ -57,6 +57,7 @@ a {
   grid-row-gap: 20px;
   grid-column-gap: 20px;
   max-width: calc(4 * (100px + 100px));
+  perspective: 1000px;
 }
 
 .buttons__container {
@@ -123,46 +124,47 @@ a {
 
 .flip-card {
   background-color: transparent;
-  width: 1em;
-  height: 0.5em;
+  width: 100%;
+  height: 100%;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   cursor: pointer;
-}
-
-.flip-card-inner {
   position: relative;
-  width: 200px;
   text-align: center;
-  transition: transform 0.8s;
   transform-style: preserve-3d;
-  box-shadow: 0 0 40px 0px black;
 }
 
-.flip-card:hover .flip-card-inner {
+.flip-card:active {
+  transition: transform 0.8s;
+}
+
+.flip-card.flip {
   transform: rotateY(+180deg);
 }
 
-.flip-card-front {
+.flip-card-front,
+.flip-card-back {
   color: black;
   position: absolute;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
-
   object-fit: cover;
 }
 
+.flip-card-front {
+  transform: rotateY(180deg);
+}
+/*
 .flip-card-back {
   position: absolute;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-image: url("cardoverlay-darker-svg 2 2.svg");
   color: white;
   transform: rotateY(180deg);
   box-shadow: 0 0 40px 0px black;
   object-fit: cover;
-  width: 200%;
-  max-height: 200%;
 }
+*/
 
 .footer-flex {
   min-height: 23vh;
@@ -181,7 +183,6 @@ a {
   margin-top: 1.5em;
   color: white;
 }
-
 
 @media screen and (min-width: 375px) {
   .main__flex {
