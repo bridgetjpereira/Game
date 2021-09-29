@@ -1,9 +1,36 @@
 let score = 0;
 let moves = 0;
 let scoreboard = document.getElementById("score");
-let movesBoard = document.getElementById("moves");
+let movesboard = document.getElementById("moves");
 
+const cardDeck = [
+  "pug",
+  "pug",
+  "alsatian-ruff",
+  "alsatian-ruff",
+  "ginger-dog",
+  "ginger-dog",
+  "spaniel",
+  "spaniel",
+  "dog",
+  "dog",
+  "whitedog",
+  "whitedog",
+  "hairydog",
+  "hairydog",
+  "coronel",
+  "coronel",
+];
+
+/*
 // Create 2 minute count down timer
+const createGame = () => {
+  shuffleArray(cardDeck);
+};
+
+
+createGame();
+*/
 
 function startTimer(duration, display) {
   let timer = duration,
@@ -44,14 +71,16 @@ let firstCard, secondCard;
 function flipCard() {
   if (lockBoard) return;
   //Avoid clicking the same card
+  updateMoves();
 
   if (this === firstCard) return;
-  this.classList.toggle("flip");
   this.classList.add("flip");
 
   if (!hasFlippedCard) {
     hasFlippedCard = true;
+
     firstCard = this;
+
     return;
   }
 
@@ -63,12 +92,16 @@ function flipCard() {
   checkForMatch();
 }
 
+function updateMoves() {
+  moves = moves + 1;
+  movesboard.innerHTML = moves;
+}
+
 function checkForMatch() {
   if (firstCard.dataset.framework === secondCard.dataset.framework) {
     disableCards();
     score = score + 1;
-    //Update content of p element you created
-    scoreboard.innerHTML = +score;
+    scoreboard.innerHTML = score;
     return;
   }
 
@@ -92,6 +125,13 @@ function unflipCards() {
   }, 1500);
 }
 
+function gameOver() {
+  if (score >= 8 && timer < 0) {
+    alert("Congratulations! You have won!");
+  } else {
+    alert("Better luck next time!");
+  }
+}
 //Create a score
 /*
 document.getElementById("scoreboard").onclick = function () {
