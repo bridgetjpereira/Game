@@ -26,45 +26,8 @@ window.onload = function () {
 };
 
 const cards = document.querySelectorAll(".flip-card");
-console.log(cards[0]);
 
 function flipCard() {
   this.classList.toggle("flip");
 }
-cards.forEach((card) => {
-  card.addEventListener("click", flipCard);
-});
-
-/*
-//Declaring variables
-
-let score = 0;
-let moves = 0;
-let scoreTracker = document.getElementById("score");
-let movesTracker = document.getElementById("moves");
-let cardsGrid = document.getElementById("cards");
-let openCard;
-let openCardChild;
-let firstCard;
-let twoCards = [];
-let intervalID;
-
-const deckCards = [
-  "pug",
-  "pug",
-  "alsatian",
-  "alsatian",
-  "gingerdog",
-  "gingerdog",
-  "spaniel",
-  "spaniel",
-  "dogportrait",
-  "dogportrait",
-  "whitedog",
-  "whitedog",
-  "hairydog",
-  "hairydog",
-  "armydog",
-  "armydog",
-];
-*/
+cards.forEach((card) => card.addEventListener("click", flipCard));
