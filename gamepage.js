@@ -2,24 +2,26 @@ let score = 0;
 let moves = 0;
 let scoreboard = document.getElementById("score");
 let movesboard = document.getElementById("moves");
+let portraitGrid = document.getElementById("cards");
 
+/*
 const cardDeck = [
-  "pug",
-  "pug",
-  "alsatian-ruff",
-  "alsatian-ruff",
-  "ginger-dog",
-  "ginger-dog",
-  "spaniel",
-  "spaniel",
-  "dog",
-  "dog",
-  "whitedog",
-  "whitedog",
-  "hairydog",
-  "hairydog",
-  "coronel",
-  "coronel",
+  { name: "pug", img: "pug elizabethan-svg.svg" },
+  { name: "pug", img: "pug elizabethan-svg.svg" },
+  { name: "alsatian-ruff", img: "Emptyframe-svg.svg" },
+  { name: "alsatian-ruff", img: "alsatian-ruff-svg.svg" },
+  { name: "ginger-dog", img: "gingerdogfinalsvg.svg" },
+  { name: "ginger-dog", img: "gingerdogfinalsvg.svg" },
+  { name: "spaniel", img: "Spaniel oil painting-svg.svg" },
+  { name: "spaniel", img: "Spaniel oil painting-svg.svg" },
+  { name: "dog", img: "DOGPORTRAIT.svg" },
+  { name: "dog", img: "DOGPORTRAIT.svg" },
+  { name: "whitedog", img: "finalwhitedogsvg.svg" },
+  { name: "whitedog", img: "finalwhitedogsvg.svg" },
+  { name: "hairydog", img: "Hairy dog man-svg.svg" },
+  { name: "hairydog", img: "Hairy dog man-svg.svg" },
+  { name: "coronel", img: "Cl dog-svg.svg" },
+  { name: "coronel", img: "Cl dog-svg.svg" },
 ];
 
 /*
@@ -27,9 +29,6 @@ const cardDeck = [
 const createGame = () => {
   shuffleArray(cardDeck);
 };
-
-
-createGame();
 */
 
 function startTimer(duration, display) {
@@ -46,7 +45,9 @@ function startTimer(duration, display) {
     display.textContent = minutes + ":" + seconds;
 
     //Stop timer if 0 seconds on the clock.
+
     if (--timer < 0) {
+      gameOver();
       clearInterval(intervalID);
     }
   }, 1000);
@@ -60,32 +61,33 @@ window.onload = function () {
 };
 
 //Start game
-
+/*layoutGame();*/
 //Flip card function
 const cards = document.querySelectorAll(".flip-card");
 
-let hasFlippedCard = false;
-let lockBoard = false;
-let firstCard, secondCard;
+let hasFlippedCard = false; //going to assume card not flipped
+let lockBoard = false; //assume board is not locked
+let firstCard, secondCard; //create a first and second card
 
 function flipCard() {
-  if (lockBoard) return;
+  if (lockBoard) return; //if lockboard is true - return i.e. exit
   //Avoid clicking the same card
   updateMoves();
-
-  if (this === firstCard) return;
+  //this refers to card that has been clicked on
+  if (this === firstCard) return; //if card clicked on is first card, return
   this.classList.add("flip");
 
   if (!hasFlippedCard) {
-    hasFlippedCard = true;
+    //if we haven't flipped a card yet
+    hasFlippedCard = true; //tell the computer we have flipped a card
 
-    firstCard = this;
+    firstCard = this; //set the card we have flipped to be the first card
 
-    return;
+    return; //exit
   }
 
-  secondCard = this;
-  hasFlippedCard = false;
+  secondCard = this; //if we get to here, second card is the one we have clicked
+  hasFlippedCard = false; //reset hasFlippedCard for next sequence
 
   //Match card function
 
@@ -126,30 +128,13 @@ function unflipCards() {
 }
 
 function gameOver() {
-  if (score >= 8 && timer < 0) {
+  if (score == 8 && timer <= 0) {
     alert("Congratulations! You have won!");
-  } else {
+  } else if (score <= 7 && timer <= 0) {
     alert("Better luck next time!");
   }
 }
-//Create a score
-/*
-document.getElementById("scoreboard").onclick = function () {
-  var score = parseInt(document.getElementById("score").innerHTML);
-  score++;
-  document.getElementById("score").innerHTML = score;
 
-  var p = document.createElement('p')
-
-var counter=0;
-var q1=prompt("what's your name?");
-
-if (q1==='akash'){
-  counter=counter+1;
-  //Update content of p element you created
-  p.innerHTML = 'yay right: ' + counter + '/ 5'
-}
-*/
 function resetBoard() {
   [hasFlippedCard, lockBoard] = [false, false];
   [firstCard, secondCard] = [null, null];
@@ -157,6 +142,13 @@ function resetBoard() {
 
 //Shuffle Cards
 
+(function shuffle() {
+  cards.forEach((card) => {
+    let randomPos = Math.floor(Math.random() * 16);
+    card.style.order = randomPos;
+  });
+})();
+/*
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
@@ -166,6 +158,23 @@ const shuffleArray = (array) => {
   }
 };
 
-//Moves
+//Lay out cards using shuffleArray
 
+const layoutGame = () => {
+  shuffleArray(cardDeck);
+
+
+
+
+    cardDeck.forEach((card, index) =>{
+
+    let div = document.createElement("div");
+    div.setAttribute("portrait", card.name);
+    div.className = "card-back-flip";
+    div.innerHTML = `<img id= "${index}" src="${card.img}" alt="${card.name}" class="hidden"></img>`;
+    portraitGrid.appendChild(div);
+    });
+
+};
+*/
 cards.forEach((card) => card.addEventListener("click", flipCard));

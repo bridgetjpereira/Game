@@ -220,13 +220,7 @@ a {
     height: fit-content;
   }
 
-  .play__flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    height: 20px;
-    max-width: 100vw;
-  }
+ 
 
   .img {
     object-fit: cover;
