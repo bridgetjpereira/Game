@@ -47,26 +47,19 @@ function startTimer(duration, display) {
     //Stop timer if 0 seconds on the clock.
 
     function gameOver() {
-      if (score == 8 || (score == 8 && timer <= 0)) {
+      if (score > 7) {
         win();
-
-        //Call show msg function here!
-        //alert("Congratulations! You have won!");
       } else if (score <= 7 && timer <= 0) {
         lose();
-
-        //Call show lost msg function here!
-        //alert("Better luck next time!");
       }
     }
+    gameOver();
 
     if (--timer < 0) {
-      gameOver();
       clearInterval(intervalID);
     }
   }, 1000);
 }
-
 //Start 2 min timer on page load
 window.onload = function () {
   var twoMinutes = 60 * 2,
