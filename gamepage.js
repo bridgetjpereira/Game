@@ -46,6 +46,20 @@ function startTimer(duration, display) {
 
     //Stop timer if 0 seconds on the clock.
 
+    function gameOver() {
+      if (score == 8 || (score == 8 && timer <= 0)) {
+        win();
+
+        //Call show msg function here!
+        //alert("Congratulations! You have won!");
+      } else if (score <= 7 && timer <= 0) {
+        lose();
+
+        //Call show lost msg function here!
+        //alert("Better luck next time!");
+      }
+    }
+
     if (--timer < 0) {
       gameOver();
       clearInterval(intervalID);
@@ -127,19 +141,40 @@ function unflipCards() {
   }, 1500);
 }
 
-function gameOver() {
-  if (score == 8 && timer <= 0) {
-    alert("Congratulations! You have won!");
-  } else if (score <= 7 && timer <= 0) {
-    alert("Better luck next time!");
-  }
+function win() {
+  document.getElementById("overlay-win").style.display = "block";
 }
+
+function lose() {
+  document.getElementById("overlay-lose").style.display = "block";
+}
+/*
+const showLoseMsg = () => {
+  document.getElementById("message-lose").classList.remove("hidden");
+  document.getElementById("message-lose").classList.add("visible");
+};
+
+const showCongratulations_msg = () => {
+  document.getElementById("congratulations_msg").classList.remove("hidden");
+  document.getElementById("congratulations_msg").classList.add("visible");
+};
+
+const hideLoseMsg = () => {
+  document.getElementById("message-lose").classList.add("hidden");
+  document.getElementById("message-lose").classList.remove("visible");
+};
+
+const hideCongratulations_msg = () => {
+  document.getElementById("congratulations_msg").classList.add("hidden");
+  document.getElementById("congratulations_msg").classList.remove("visible");
+};
 
 function resetBoard() {
   [hasFlippedCard, lockBoard] = [false, false];
   [firstCard, secondCard] = [null, null];
 }
 
+*/
 //Shuffle Cards
 
 (function shuffle() {
