@@ -15,6 +15,7 @@ h1 {
   text-align: center;
   font-size: 70px;
   padding-top: 2em;
+  color:white;
 }
 
 p {
@@ -24,24 +25,27 @@ p {
   padding-right: 10em;
   padding-left: 10em;
   font-size: 40px;
+  color:white;
 }
 
 body {
   background: url(Final-wood-panel-low-new-svg.svg) bottom center no-repeat;
   background-size: cover;
-  color: rgb(65, 42, 42);
   min-height: 100vh;
+  background-color: rgb(136, 26, 26);
+
+
 }
 
 button {
   border-radius: 15px;
-  border-color: white;
-  color: rgb(65, 42, 42);
+  border-color: rgb(136, 26, 26);
+  color: rgb(136, 26, 26);
   font-size: 35px;
-  background-color:white
   align-items: center;
   padding: 5px;
   margin-top: 2em;
+  background-color: none;
 }
 
 .button-flex {
