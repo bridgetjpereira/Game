@@ -81,11 +81,13 @@ function flipCard() {
   //Avoid clicking the same card
   updateMoves();
   //this refers to card that has been clicked on
-  if (this === firstCard) return; //if card clicked on is first card, return
+  if (this === firstCard) return; //if card clicked on is first card which we've already clicked, do nothing
+  //if we get here, means a new card has been clicked on
   this.classList.add("flip");
 
+  //we see if card has been flipped beforehand
+  // if it hasn't go here
   if (!hasFlippedCard) {
-    //if we haven't flipped a card yet
     hasFlippedCard = true; //tell the computer we have flipped a card
 
     firstCard = this; //set the card we have flipped to be the first card
@@ -114,12 +116,13 @@ function checkForMatch() {
     return;
   }
 
+  //if cards don't match, flip them back over!
   unflipCards();
 }
 
 function disableCards() {
   firstCard.removeEventListener("click", flipCard);
-  secondCard.removeEventListener("click", flipCard);
+  secondCard.removeEventListener("click", flipCard); //calls function flip card and leaves both cards face up and not clickable
 }
 
 function unflipCards() {
@@ -206,3 +209,4 @@ const layoutGame = () => {
 };
 */
 cards.forEach((card) => card.addEventListener("click", flipCard));
+//listening for a click on each card in cards array and if clicked calls the flipCard function.
