@@ -58,11 +58,11 @@ body {
 button {
   height: 100px;
   width: 200px;
-  border: 2px solid rgb(136, 26, 26);
+  border: 2px solid #f7d544;
   border-radius: 15px;
   font: bold;
   font-size: 30px;
-  background-color: rgb(136, 26, 26);
+  background-color: #f7d544;
   margin: 30px;
   box-shadow: black;
 }
@@ -76,7 +76,6 @@ nav {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* background-color: rgb(136, 26, 26); */
   background-color: #f7d544;
   color: white;
 }
@@ -94,7 +93,7 @@ nav {
 .nav__flex {
   display: flex;
   justify-content: space-evenly;
-  background-color: rgb(136, 26, 26);
+  background-color: #f7d544;
   color: white;
   height: 10vh;
 }
@@ -117,9 +116,6 @@ svg {
 
 .portrait__grid {
   display: grid;
-  /*grid-template-columns: repeat(auto-fill, minmax(100em, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(100em, 1fr));
-  */
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto auto 30vh;
   grid-gap: 10px;
@@ -136,7 +132,7 @@ svg {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: red;
+  background-color: #f7d544;
 }
 
 .button {
@@ -184,7 +180,7 @@ svg {
   background-color: transparent;
   width: 100%;
   height: auto;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px;
   cursor: pointer;
   position: relative;
   text-align: center;
@@ -250,7 +246,7 @@ svg {
   .nav__flex {
     display: flex;
     justify-content: space-evenly;
-    background-color: rgb(136, 26, 26);
+    background-color: #f7d544;
     color: white;
   }
 
@@ -262,7 +258,7 @@ svg {
     grid-column-gap: 20px;
     min-height: 70vh;
     background-color: #f7d544;
-    
+
     object-fit: cover;
     max-width: calc(4 * (70px + 10px));
     margin-top: 30px;
@@ -296,11 +292,11 @@ svg {
   button {
     height: 50px;
     width: 200px;
-    border: 2px solid rgb(136, 26, 26);
+    border: 2px solid #f7d544;
     border-radius: 15px;
     font: bold;
     font-size: 30px;
-    background-color: rgb(136, 26, 26);
+    background-color: #f7d544;
     margin: 30px;
     box-shadow: black;
   }
@@ -339,17 +335,17 @@ svg {
 
   #overlay-win,
   #overlay-lose {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    cursor: pointer;
     overflow: hidden;
   }
 
@@ -374,11 +370,11 @@ svg {
   button {
     height: 50px;
     width: 200px;
-    border: 2px solid rgb(136, 26, 26);
+    border: 2px solid #f7d544;
     border-radius: 15px;
     font: bold;
     font-size: 30px;
-    background-color: rgb(136, 26, 26);
+    background-color: #f7d544;
     margin: 30px;
     box-shadow: black;
   }
@@ -388,20 +384,14 @@ svg {
   .nav__flex {
     display: flex;
     justify-content: space-evenly;
-    background-color: rgb(136, 26, 26);
+    background-color: #f7d544;
     color: white;
   }
 
   .score-board {
     font-size: 15px;
   }
-  /*
-  .img {
-    object-fit: cover;
-    width: 100%;
-    max-height: 100%;
-  }
-*/
+
   .footer-flex {
     display: flex;
     background: url(Final-wood-panel-low-new-svg.svg) bottom center no-repeat;
@@ -453,11 +443,11 @@ svg {
   button {
     height: 100px;
     width: 200px;
-    border: 2px solid rgb(136, 26, 26);
+    border: 2px solid #f7d544;
     border-radius: 15px;
     font: bold;
     font-size: 30px;
-    background-color: rgb(136, 26, 26);
+    background-color: #f7d544;
     margin: 30px;
     box-shadow: black;
   }
@@ -491,7 +481,7 @@ svg {
     margin-left: auto;
     margin-right: auto;
     object-fit: contain;
-    background-color: rgb(136, 26, 26);
+    background-color: #f7d544;
     text-align: center;
     max-width: calc(4 * (140px + 20px));
   }
@@ -506,11 +496,11 @@ svg {
   button {
     height: 100px;
     width: 200px;
-    border: 2px solid rgb(136, 26, 26);
+    border: 2px solid #f7d544;
     border-radius: 15px;
     font: bold;
     font-size: 30px;
-    background-color: rgb(136, 26, 26);
+    background-color: #f7d544;
     margin: 30px;
     box-shadow: black;
   }
@@ -551,7 +541,7 @@ svg {
     margin-left: auto;
     margin-right: auto;
     object-fit: contain;
-    background-color: rgb(136, 26, 26);
+    background-color: #f7d544;
     text-align: center;
     max-width: calc(4 * (140px + 20px));
   }
@@ -566,11 +556,11 @@ svg {
   button {
     height: 100px;
     width: 200px;
-    border: 2px solid rgb(136, 26, 26);
+    border: 2px solid #f7d544;
     border-radius: 15px;
     font: bold;
     font-size: 30px;
-    background-color: rgb(136, 26, 26);
+    background-color: #f7d544;
     margin: 30px;
     box-shadow: black;
   }
