@@ -4,33 +4,6 @@ let scoreboard = document.getElementById("score");
 let movesboard = document.getElementById("moves");
 let portraitGrid = document.getElementById("cards");
 
-/*
-const cardDeck = [
-  { name: "pug", img: "pug elizabethan-svg.svg" },
-  { name: "pug", img: "pug elizabethan-svg.svg" },
-  { name: "alsatian-ruff", img: "Emptyframe-svg.svg" },
-  { name: "alsatian-ruff", img: "alsatian-ruff-svg.svg" },
-  { name: "ginger-dog", img: "gingerdogfinalsvg.svg" },
-  { name: "ginger-dog", img: "gingerdogfinalsvg.svg" },
-  { name: "spaniel", img: "Spaniel oil painting-svg.svg" },
-  { name: "spaniel", img: "Spaniel oil painting-svg.svg" },
-  { name: "dog", img: "DOGPORTRAIT.svg" },
-  { name: "dog", img: "DOGPORTRAIT.svg" },
-  { name: "whitedog", img: "finalwhitedogsvg.svg" },
-  { name: "whitedog", img: "finalwhitedogsvg.svg" },
-  { name: "hairydog", img: "Hairy dog man-svg.svg" },
-  { name: "hairydog", img: "Hairy dog man-svg.svg" },
-  { name: "coronel", img: "Cl dog-svg.svg" },
-  { name: "coronel", img: "Cl dog-svg.svg" },
-];
-
-/*
-// Create 2 minute count down timer
-const createGame = () => {
-  shuffleArray(cardDeck);
-};
-*/
-
 function startTimer(duration, display) {
   let timer = duration,
     minutes,
@@ -144,34 +117,6 @@ function win() {
 function lose() {
   document.getElementById("overlay-lose").style.display = "block";
 }
-/*
-const showLoseMsg = () => {
-  document.getElementById("message-lose").classList.remove("hidden");
-  document.getElementById("message-lose").classList.add("visible");
-};
-
-const showCongratulations_msg = () => {
-  document.getElementById("congratulations_msg").classList.remove("hidden");
-  document.getElementById("congratulations_msg").classList.add("visible");
-};
-
-const hideLoseMsg = () => {
-  document.getElementById("message-lose").classList.add("hidden");
-  document.getElementById("message-lose").classList.remove("visible");
-};
-
-const hideCongratulations_msg = () => {
-  document.getElementById("congratulations_msg").classList.add("hidden");
-  document.getElementById("congratulations_msg").classList.remove("visible");
-};
-
-function resetBoard() {
-  [hasFlippedCard, lockBoard] = [false, false];
-  [firstCard, secondCard] = [null, null];
-}
-
-*/
-//Shuffle Cards
 
 (function shuffle() {
   cards.forEach((card) => {
@@ -179,34 +124,6 @@ function resetBoard() {
     card.style.order = randomPos;
   });
 })();
-/*
-const shuffleArray = (array) => {
-  for (let i = array.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
-    let temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-  }
-};
 
-//Lay out cards using shuffleArray
-
-const layoutGame = () => {
-  shuffleArray(cardDeck);
-
-
-
-
-    cardDeck.forEach((card, index) =>{
-
-    let div = document.createElement("div");
-    div.setAttribute("portrait", card.name);
-    div.className = "card-back-flip";
-    div.innerHTML = `<img id= "${index}" src="${card.img}" alt="${card.name}" class="hidden"></img>`;
-    portraitGrid.appendChild(div);
-    });
-
-};
-*/
 cards.forEach((card) => card.addEventListener("click", flipCard));
 //listening for a click on each card in cards array and if clicked calls the flipCard function.

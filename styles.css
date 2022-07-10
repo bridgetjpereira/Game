@@ -307,7 +307,7 @@ svg {
   .footer-flex {
     background: url(Final-wood-panel-low-new-svg.svg) bottom center no-repeat;
     background-size: cover;
-    height: 15vh;
+    height: 20vh;
   }
 }
 
@@ -387,7 +387,7 @@ svg {
   .footer-flex {
     background: url(Final-wood-panel-low-new-svg.svg) bottom center no-repeat;
     background-size: cover;
-    height: 15vh;
+    height: 20vh;
   }
 }
 
@@ -476,7 +476,7 @@ svg {
     display: flex;
     background: url(Final-wood-panel-low-new-svg.svg) bottom center no-repeat;
     background-size: cover;
-    flex: 1;
+    height: 20vh;
   }
 
   .footer-flex > .img {
@@ -540,11 +540,13 @@ svg {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 20vh;
   }
 
   .score-board {
     font-size: 20px;
   }
+ 
 }
 
 @media screen and (min-width: 1024px) {
@@ -605,6 +607,7 @@ svg {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 20vh;
   }
 }
 
@@ -661,6 +664,7 @@ svg {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 20vh;
   }
 
   .score-board {
