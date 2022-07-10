@@ -231,6 +231,84 @@ svg {
   color: white;
   max-height: 70px;
 }
+@media screen and (min-width: 320px) {
+  #game_top {
+    font-size: 25px;
+  }
+  .main__flex {
+    display: flex;
+    min-width: 100%;
+    flex-wrap: wrap;
+    min-height: 70%;
+  }
+
+  .nav__flex {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f7d544;
+    color: white;
+  }
+
+  .portrait__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(70px, 1fr));
+    grid-row-gap: 40px;
+    grid-column-gap: 20px;
+    min-height: 70vh;
+    background-color: #f7d544;
+
+    object-fit: cover;
+    max-width: calc(4 * (70px + 10px));
+    margin-top: 30px;
+  }
+
+  .img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  #text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 25px;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    align-items: center;
+    text-align: center;
+  }
+
+  #overlay_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    height: 50px;
+    width: 200px;
+    border: 2px solid #f7d544;
+    border-radius: 15px;
+    font: bold;
+    font-size: 30px;
+    background-color: #f7d544;
+    margin: 30px;
+    box-shadow: black;
+  }
+
+  .score-board {
+    font-size: 12px;
+  }
+
+  .footer-flex {
+    background: url(Final-wood-panel-low-new-svg.svg) bottom center no-repeat;
+    background-size: cover;
+  }
+}
 
 @media screen and (min-width: 375px) {
   #game_top {
@@ -311,7 +389,7 @@ svg {
   }
 }
 
-@media screen and (min-width: 425px) {
+@media only screen and (min-width: 319px) and (max-width: 374px) {
   .main__flex {
     min-width: 100%;
   }
