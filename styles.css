@@ -540,13 +540,12 @@ svg {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 20vh;
+    height: 18vh;
   }
 
   .score-board {
     font-size: 20px;
   }
- 
 }
 
 @media screen and (min-width: 1024px) {
@@ -559,7 +558,7 @@ svg {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
     grid-column-gap: 20px;
-    grid-row-gap: 30px;
+    grid-row-gap: 15px;
     margin-left: auto;
     margin-right: auto;
     object-fit: contain;
@@ -607,7 +606,7 @@ svg {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 20vh;
+    height: 18vh;
   }
 }
 
@@ -664,7 +663,7 @@ svg {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 20vh;
+    height: 10vh;
   }
 
   .score-board {
