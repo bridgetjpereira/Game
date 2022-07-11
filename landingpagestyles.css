@@ -166,3 +166,40 @@ footer {
     margin-left: 3.5em;
   }
 }
+@media screen and (min-width: 1024px) {
+  h1 {
+    text-align: center;
+    font-size: 65px;
+    padding-top: 2em;
+    padding-bottom: 0em;
+    color: white;
+  }
+
+  p {
+    text-align: center;
+    padding-top: 2px;
+    padding-right: 0em;
+    padding-left: 0em;
+    font-size: 25px;
+    color: white;
+    margin-left: 25em;
+    margin-right: 25em;
+  }
+  button {
+    border-radius: 15px;
+    border-color: #f7d544;
+    color: #f7d544;
+    font-size: 20px;
+    align-items: center;
+    padding: 5px;
+    margin-top: 2em;
+    background-color: none;
+  }
+  footer {
+    height: 30em;
+    padding-top: 0em;
+  }
+  img {
+    margin-left: 3.5em;
+  }
+}
